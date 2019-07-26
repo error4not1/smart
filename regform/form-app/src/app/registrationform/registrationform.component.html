@@ -1,0 +1,208 @@
+<div class="container center_div">
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">Registration Form</div>
+    <div class="panel-body">
+
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm)">
+
+        <div class="container center_div">
+          <div class="form-group">
+            <label class="col-md-8 control-label">
+              <div class="col-md-12 inputGroupContainer">
+                <input type="text" formControlName="name" class="form-control" id="name" placeholder="ENTER NAME">
+                <div *ngIf="name.touched && name.invalid" class="alert alert-danger" >
+                    <div *ngIf="name.errors.required">* Name Required</div>
+                    
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="container center_div">
+          <div class="form-group">
+            <label class="col-md-8 control-label">
+              <div class="col-md-12 inputGroupContainer">
+                <input type="text" formControlName="emailId" class="form-control" placeholder="ENTER EMAIL" id="emailId">
+                <div *ngIf="emailId.touched && emailId.invalid" class="alert alert-danger" >
+                    <div *ngIf="emailId.errors.required">* Email Required</div>
+                    
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="container center_div">
+          <div class="form-group">
+            <label class="col-md-8 control-label">
+              <div class="col-md-12 inputGroupContainer">
+                <input type="text" formControlName="mobileNumber" class="form-control" placeholder="ENTER MOBILE NUMBER"
+                  id="mobileNumber">
+                  <div *ngIf="mobileNumber.touched && mobileNumber.invalid" class="alert alert-danger" >
+                      <div *ngIf="mobileNumber.errors.required">* Mobile Number Required</div>
+                      <div *ngIf="mobileNumber.errors.minlength">* Mobile Number must be 10 Digit</div>
+                  </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="container center_div">
+          <div class="form-group">
+            <label class="col-md-8 control-label">
+              <div class="col-md-12 inputGroupContainer">
+                <input type="password" formControlName="password" class="form-control" placeholder="ENTER PASSWORD" id="password">
+                <div *ngIf="password.touched && password.invalid" class="alert alert-danger" >
+                    <div *ngIf="password.errors.required">* Password Required</div>
+                    
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="container center_div">
+          <div class="form-group">
+            <label class="col-md-8 control-label">
+              <div class="col-md-12 inputGroupContainer">
+                <h4>ENTER DOB :</h4>
+                <input type="date" formControlName="dob" class="form-control" placeholder="ENTER DATE OF BIRTH" id="dob">
+                <div *ngIf="dob.touched && dob.invalid" class="alert alert-danger" >
+                    <div *ngIf="dob.errors.required">* Date Of Birth Required</div>
+                    
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="container center_div">
+          <div class="form-group">
+            <label class="col-md-8 control-label">
+              <div class="col-md-12 inputGroupContainer">
+                <!-- <h3><strong>Gender :</strong></h3>
+                <input type="radio" value="male" formControlName="gender" id="gender" name="gender" required ngModel> Male
+                <input type="radio" value="female" formControlName="gender" id="gender" name="gender" required ngModel> Female -->
+                <input type="text" formControlName="gender" class="form-control" placeholder="ENTER GENDER" id="gender">
+                <div *ngIf="gender.touched && gender.invalid" class="alert alert-danger" >
+                    <div *ngIf="gender.errors.required">* Gender Required</div>
+                    
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="container center_div">
+          <div class="form-group">
+            <label class="col-md-8 control-label">
+              <div class="col-md-12 inputGroupContainer">
+                <input type="text" formControlName="addressLine1" class="form-control" placeholder="ENTER ADDRESS 1" id="addressLine1">
+                
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="container center_div">
+          <div class="form-group">
+            <label class="col-md-8 control-label">
+              <div class="col-md-12 inputGroupContainer">
+                <input type="text" formControlName="addressLine2" class="form-control" placeholder="ENTER ADDRESS 2" id="addressLine2">
+              </div>
+            </label>
+          </div>
+        </div>
+
+
+        <div class="container center_div">
+          <div class="form-group">
+            <label class="col-md-8 control-label">
+              <div class="col-md-12 inputGroupContainer">
+                <input type="text" formControlName="city" class="form-control" placeholder="ENTER CITY" id="city">
+                <div *ngIf="city.touched && city.invalid" class="alert alert-danger" >
+                    <div *ngIf="city.errors.required">* City Required</div>
+                    
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+
+
+        <div class="container center_div">
+          <div class="form-group">
+            <label class="col-md-8 control-label">
+              <div class="col-md-12 inputGroupContainer">
+                <input type="text" formControlName="state" class="form-control" 
+                placeholder="ENTER STATE" id="state">
+                <div *ngIf="state.touched && state.invalid" class="alert alert-danger" >
+                    <div *ngIf="state.errors.required">* State Required</div>
+                    
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- <div class="container center_div">
+            <div class="form-group">
+              <label class="col-md-8 control-label">
+                <div class="col-md-12 inputGroupContainer">
+                  <select [(ngModel)]="state"  formControlName="state" class="form-control" id="state">
+                      <option value="" disabled selected>Select a State</option>
+                      <option value="volvo">Maharashtra</option>
+                      <option value="saab">Gujarat</option>
+                      <option value="mercedes">Delhi</option>
+                      <option value="audi">Punjab</option>
+                    </select>
+                    <div *ngIf="state.invalid" class="alert alert-danger" > 
+                        State required. 
+                    </div>
+                </div>
+              </label>
+            </div>
+          </div> -->
+
+        <div class="container center_div">
+          <div class="form-group">
+            <label class="col-md-8 control-label">
+              <div class="col-md-12 inputGroupContainer">
+                <input type="text" formControlName="pincode" class="form-control" placeholder="ENTER PINCODE" id="pincode">
+                <div *ngIf="pincode.touched && pincode.invalid" class="alert alert-danger">
+                  <div *ngIf="pincode.errors.required">* Pincode Required</div>
+                  <div *ngIf="pincode.errors.minlength">* Pincode must Need 6 Digit</div>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="container center_div">
+          <div class="form-group">
+            <label class="col-md-8 control-label">
+              <div class="col-md-12 inputGroupContainer">
+                <input type="text" formControlName="landmark" class="form-control" placeholder="ENTER LANDMARK" id="landmark">
+                <div *ngIf="landmark.touched && landmark.invalid" class="alert alert-danger">
+                  <div *ngIf="landmark.errors.required">* LandMark Required</div>
+                  <!-- <div *ngIf="landmark.errors.minlength">* Username must Need 3 letters</div> -->
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit" class="btn btn-primary">Submit</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <button type="reset" class="btn btn-primary">Reset</button>
+      </form>
+
+      {{userForm.value|json}}
+
+    </div>
+  </div>

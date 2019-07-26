@@ -1,0 +1,9 @@
+c:\users\bhosa\documents\visual studio 2012\Projects\WcfService7\WcfService7\bin\WcfService7.dll
+c:\users\bhosa\documents\visual studio 2012\Projects\WcfService7\WcfService7\bin\WcfService7.pdb
+c:\users\bhosa\documents\visual studio 2012\Projects\WcfService7\WcfService7\obj\Debug\WcfService7.csprojResolveAssemblyReference.cache
+c:\users\bhosa\documents\visual studio 2012\Projects\WcfService7\WcfService7\obj\Debug\WcfService7.dll
+c:\users\bhosa\documents\visual studio 2012\Projects\WcfService7\WcfService7\obj\Debug\WcfService7.pdb
+C:\Users\vita1\Desktop\smart\WcfService7\WcfService7\bin\WcfService7.dll
+C:\Users\vita1\Desktop\smart\WcfService7\WcfService7\bin\WcfService7.pdb
+C:\Users\vita1\Desktop\smart\WcfService7\WcfService7\obj\Debug\WcfService7.dll
+C:\Users\vita1\Desktop\smart\WcfService7\WcfService7\obj\Debug\WcfService7.pdb
